@@ -7,6 +7,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema authentication
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `authentication` ;
 
 -- -----------------------------------------------------
 -- Schema authentication
@@ -22,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `authentication`.`users` (
   `first_name` VARCHAR(45) NULL,
   `last_name` VARCHAR(45) NULL,
   `email` VARCHAR(255) NULL,
-  `password` VARCHAR(45) NULL,
+  `password` VARCHAR(255) NULL,
   `created_at` DATETIME NULL DEFAULT NOW(),
   `updated_at` DATETIME NULL DEFAULT NOW(),
   PRIMARY KEY (`id`))
